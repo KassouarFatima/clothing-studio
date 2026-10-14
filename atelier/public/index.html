@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Atelier</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M20 8 Q32 16 44 8 L60 18 L54 30 L46 26 L46 58 L18 58 L18 26 L10 30 L4 18 Z' fill='%23b5562b'/%3E%3C/svg%3E">
+</head>
+<body>
+<div id="shop">
+  <section id="chat">
+    <header>
+      <div class="avatar">Y</div>
+      <div><strong>Yanis</strong><span>Tailor · designs your clothes with AI</span></div>
+    </header>
+    <div id="messages"></div>
+    <form id="composer">
+      <input id="input" autocomplete="off" placeholder="Describe the print you want…">
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <section id="product">
+    <div id="stage">
+      <div id="viewer3d"></div>
+      <img id="mockup" alt="">
+      <div id="empty">Your design will appear here.<br><small>Pick a garment below, then tell Yanis what you'd like — or design it yourself. Drag to turn it.</small></div>
+      <div id="working" hidden><div class="spinner"></div><p id="workingText">Designing…</p></div>
+    </div>
+    <div id="garments" role="group" aria-label="Garment"></div>
+    <div id="typeDecision" hidden>
+      <p><strong id="tdName"></strong> <span id="tdFeatures" class="muted"></span></p>
+      <p id="tdNote" class="muted"></p>
+      <p class="muted">Publish it so everyone can choose it in the catalogue, or keep it just for you.</p>
+      <div class="row">
+        <input id="tdAuthor" placeholder="Your name (optional)" maxlength="30">
+        <button id="tdPublish">Publish to the catalogue</button>
+        <button id="tdKeep" class="ghost">Keep it just for me</button>
+        <button id="tdDiscard" class="ghost">Discard</button>
+      </div>
+    </div>
+    <p id="summary"></p>
+    <div id="actions">
+      <button id="btnTry" disabled>Try it on (realistic photo)</button>
+      <button id="btnPrint" class="secondary" disabled>Download for printing</button>
+      <button id="btnAgain" class="ghost" disabled>New version</button>
+    </div>
+    <div id="actions2">
+      <button id="btnLetsDoIt">✨ Let'sDo it.</button>
+      <button id="btnDIY" class="ghost">✏️ Design it yourself</button>
+      <button id="btnPublish" class="ghost" disabled>🏬 Put it in the store</button>
+    </div>
+    <div id="results"></div>
+  </section>
+</div>
+
+<!-- Try-on: camera, live preview and the realistic AI photo -->
+<div id="tryon" hidden>
+  <div class="panel">
+    <header>
+      <strong>Try it on</strong>
+      <div class="tabs">
+        <button data-mode="photo" class="active">Realistic photo</button>
+        <button data-mode="live">Quick preview</button>
+      </div>
+      <button id="closeTry" class="ghost">Close</button>
+    </header>
+    <div id="camWrap">
+      <video id="video" playsinline muted></video>
+      <canvas id="overlay"></canvas>
+      <div id="guide"></div>
+      <div id="countdown" hidden></div>
+      <img id="tryResult" hidden alt="">
+      <div id="tryWorking" hidden><div class="spinner"></div><p>Creating your realistic photo…<br><small id="tryTimer">usually 30–60 seconds</small></p></div>
+    </div>
+    <p id="tryHint">Best quality: “Upload a photo” taken with your phone (sharper face than the laptop camera). Head to hips visible, good light.</p>
+    <div class="row">
+      <button id="btnShoot">Take photo &amp; try on</button>
+      <label class="ghost upload">Upload a phone photo (best)<input id="upload" type="file" accept="image/*" hidden></label>
+      <a id="saveTry" class="secondary" hidden download="atelier-try-on.jpg">Save photo</a>
+    </div>
+  </div>
+</div>
+<!-- Design it yourself -->
+<div id="editor" hidden>
+  <div class="panel wide">
+    <header><strong>Design it yourself</strong><button id="edClose" class="ghost">Close</button></header>
+    <div class="edBody">
+      <div class="edCanvasWrap"><canvas id="edCanvas" width="1024" height="1280"></canvas><small>Print area · drag to move</small></div>
+      <div class="edTools">
+        <label class="edLabel">Your image</label>
+        <label class="ghost upload">Upload an image<input id="edUpload" type="file" accept="image/*" hidden></label>
+        <label class="check"><input id="edRemoveWhite" type="checkbox" checked> remove white background</label>
+        <label class="edLabel">Add text</label>
+        <div class="row2"><input id="edText" placeholder="Your words…" maxlength="40"><button id="edAddText">Add</button></div>
+        <div id="edTextTools" hidden class="row2"><select id="edFont"></select><input id="edTextColor" type="color" value="#111111"></div>
+        <label class="edLabel">Layers</label>
+        <div id="edLayers"></div>
+        <label class="edLabel">Size <input id="edSize" type="range" min="10" max="300" value="100"></label>
+        <label class="edLabel">Rotate <input id="edRotate" type="range" min="-180" max="180" value="0"></label>
+        <button id="edDelete" class="ghost">Delete layer</button>
+        <label class="edLabel">Colour</label>
+        <div id="edColors"></div>
+        <label class="edLabel">Placement
+          <select id="edPlacement">
+            <option value="front-center">Front, centre</option><option value="front-large">Front, full</option>
+            <option value="chest-left">Small, left chest</option><option value="back">Back, full</option>
+          </select>
+        </label>
+        <p id="edHint"></p>
+        <button id="edApply">Put it on the garment</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Describe a new garment type -->
+<div id="newType" hidden>
+  <div class="panel">
+    <header><strong>Describe a new garment</strong><button id="ntClose" class="ghost">Close</button></header>
+    <p class="muted">Sleeves, length, hood, pocket, zip, neckline, fabric… describe the piece you have in mind. We'll make it in 3D with your design, then you decide whether to publish it.</p>
+    <textarea id="ntText" rows="3" maxlength="400" placeholder="e.g. a cropped hoodie with a zip"></textarea>
+    <div id="ntExamples">
+      <button class="chip">a cropped hoodie with a zip</button><button class="chip">a long t-shirt dress with a V-neck</button>
+      <button class="chip">a sleeveless sport top</button><button class="chip">a long-sleeve tee with a chest pocket</button>
+    </div>
+    <button id="ntGo">Create it</button>
+  </div>
+</div>
+<!-- Publish to the store -->
+<div id="publish" hidden>
+  <div class="panel">
+    <header><strong>Put it in the store</strong><button id="pubClose" class="ghost">Close</button></header>
+    <p class="muted">Your design will hang on the wall of the Atelier boutique, where everyone can see it and try it on.</p>
+    <input id="pubTitle" placeholder="Name of your design" maxlength="40">
+    <input id="pubAuthor" placeholder="Your name (shown as “by …”)" maxlength="30">
+    <button id="pubGo">Publish</button>
+  </div>
+</div>
+<div id="toast"></div>
+<script type="importmap">
+{ "imports": {
+  "three": "/vendor/three/build/three.module.js",
+  "three/addons/": "/vendor/three/examples/jsm/"
+} }
+</script>
+<script type="module" src="app.js"></script>
+</body>
+</html>

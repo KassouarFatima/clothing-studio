@@ -1,0 +1,17 @@
+{
+  "name": "clothing-studio",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Combined site: 3D Garment Customizer shop front + Atelier AI tailor studio.",
+  "type": "module",
+  "scripts": {
+    "start": "node start.mjs",
+    "test": "npm run test:tryon --prefix customizer && npm test --prefix customizer/serveur",
+    "shop": "npm run dev --prefix customizer",
+    "api": "npm start --prefix customizer/serveur",
+    "atelier": "npm start --prefix atelier"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

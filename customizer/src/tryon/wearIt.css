@@ -1,0 +1,67 @@
+.wear-dialog { width: min(820px, calc(100vw - 28px)); max-height: calc(100dvh - 28px); overflow: auto; padding: 22px; border: 1px solid rgba(255,255,255,.6); border-radius: 18px; background: #e6e8ea; color: #1f2937; box-shadow: 0 24px 90px #0005; }
+.wear-dialog::backdrop { background: #111827aa; backdrop-filter: blur(8px); }
+.wear-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
+.wear-header h2 { font-size: 25px; font-weight: 800; }
+.wear-header p { font-size: 12px; color: #526070; margin-top: 2px; }
+.wear-close { width: 40px; height: 40px; border-radius: 50%; background: #ffffffa6; font-size: 28px; line-height: 1; }
+.wear-options { display: flex; justify-content: center; margin-bottom: 14px; }
+.wear-options .garment-selector { background: #fff6; border-color: #ffffff; }
+.wear-options .garment-selector button { color: #334155; }
+
+/* One button starts it all: pick a picture, get measured, see the size. */
+.wear-file { position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
+.wear-pick { display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 14px; }
+.wear-pick-button { padding: 11px 22px; border-radius: 10px; background: #344154; color: #fff; font-weight: 700; font-size: 13px; }
+.wear-pick-button:hover { background: #1f2937; }
+.wear-pick-name { max-width: 260px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 12px; color: #526070; }
+
+.wear-stage-shell { position: relative; background: #1d2530; border-radius: 12px; overflow: hidden; display: flex; align-items: center; justify-content: center; min-height: 220px; }
+.wear-stage { position: relative; max-height: 54dvh; flex-shrink: 0; }
+.wear-stage img { width: 100%; height: 100%; display: block; object-fit: contain; }
+.wear-mirrored { transform: scaleX(-1); }
+.wear-overlay { position: absolute; inset: 0; pointer-events: none; }
+.wear-occlusion { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+.wear-status { position: absolute; bottom: 12px; left: 12px; right: 12px; margin: auto; width: fit-content; max-width: calc(100% - 24px); padding: 8px 13px; border-radius: 20px; background: #111827d9; color: #fff; font-size: 12px; text-align: center; }
+.wear-message { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px; padding: 32px; background: #1d2530e8; color: #fff; text-align: center; }
+.wear-message p { max-width: 390px; font-size: 14px; }
+.wear-message button { padding: 10px 18px; border-radius: 8px; background: #fff; color: #172033; font-weight: 600; }
+
+/* Flexible stage: the wheel zooms the whole picture, dragging pans it and a
+   double-click fits it again. The frame keeps the zoom inside the shell. */
+.wear-stage-frame { display: flex; }
+.wear-zoomed { cursor: grab; }
+.wear-zoomed:active { cursor: grabbing; }
+
+/* The measured body and the letter size it maps to, on a unisex chart. */
+.wear-size { margin-top: 14px; padding: 14px 16px; border-radius: 12px; background: #ffffffcc; border: 1px solid #fff; }
+.wear-size h3 { font-size: 15px; font-weight: 800; margin-bottom: 10px; }
+.wear-size-list { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.wear-size-list li { display: flex; align-items: baseline; gap: 6px; padding: 5px 11px; border-radius: 16px; background: #344154; color: #fff; font-size: 12px; }
+.wear-size-list span { opacity: .72; }
+.wear-size-list b { font-weight: 700; }
+.wear-size-note { margin-top: 10px; font-size: 11px; line-height: 1.6; color: #576474; }
+
+.wear-adjustments { display: flex; align-items: center; gap: 24px; margin-top: 18px; }
+.wear-adjustments label { display: flex; align-items: center; gap: 10px; font-size: 12px; font-weight: 600; flex: 1; }
+.wear-adjustments input[type='range'] { min-width: 0; width: 100%; accent-color: #344154; }
+.wear-adjustments .wear-mirror { flex: 0; white-space: nowrap; }
+
+/* Return every Size / Position slider to its default. */
+.wear-reset { flex: 0; padding: 7px 15px; border-radius: 8px; background: #344154; color: #fff; font-size: 12px; font-weight: 700; }
+.wear-reset:hover { background: #1f2937; }
+
+.wear-actions { display: flex; justify-content: center; gap: 12px; margin-top: 14px; }
+.wear-actions button { padding: 9px 16px; border-radius: 8px; background: #ffffffcc; color: #1f2937; font-weight: 600; font-size: 12px; }
+.wear-actions button:hover { background: #fff; }
+.wear-note { margin-top: 16px; color: #576474; font-size: 11px; line-height: 1.6; text-align: center; }
+.wear-dialog button:focus-visible, .wear-dialog input:focus-visible { outline: 2px solid #344154; outline-offset: 3px; }
+
+@media (max-width: 600px) {
+  .wear-dialog { padding: 16px; }
+  .wear-adjustments { gap: 12px; flex-wrap: wrap; }
+  .wear-adjustments label { flex-basis: 38%; }
+  .wear-adjustments .wear-mirror { flex-basis: 100%; justify-content: center; }
+  .wear-adjustments .wear-reset { flex-basis: 100%; }
+  .wear-stage-shell { min-height: 200px; }
+  .wear-pick-name { display: none; }
+}

@@ -1,0 +1,763 @@
+{
+ "tshirt": {
+  "file": "tshirt.glb",
+  "slot": "top",
+  "name": "T-shirt",
+  "tint": true,
+  "tris": 69999,
+  "box": [
+   [
+    -0.37,
+    -0.14,
+    0.777
+   ],
+   [
+    0.37,
+    0.142,
+    1.551
+   ]
+  ],
+  "kb": 319,
+  "credit": {
+   "title": "Standard T-shirt",
+   "author": "Pieter Ferreira",
+   "username": "Badboy17Aiden",
+   "license": "CC Attribution",
+   "url": "https://sketchfab.com/3d-models/standard-t-shirt-1815c01895bd4538bc0bd05c3394698d"
+  },
+  "size": {
+   "M": {
+    "chest": 106,
+    "waist": null,
+    "hips": null
+   },
+   "grade": 5,
+   "fit": "regular",
+   "cut": "unisex"
+  },
+  "street": true
+ },
+ "mens_shirt": {
+  "file": "mens_shirt.glb",
+  "slot": "top",
+  "name": "Dress shirt",
+  "tint": true,
+  "tris": 69999,
+  "box": [
+   [
+    -0.328,
+    -0.161,
+    0.684
+   ],
+   [
+    0.329,
+    0.163,
+    1.515
+   ]
+  ],
+  "kb": 367,
+  "credit": {
+   "title": "Men's Shirt",
+   "author": "johnniemaneiro",
+   "username": "johnniemaneiro",
+   "license": "CC Attribution",
+   "url": "https://sketchfab.com/3d-models/mens-shirt-ab5e592ccab34ed0ad2777f9b32c2e0f"
+  },
+  "size": {
+   "M": {
+    "chest": 112,
+    "waist": 108,
+    "hips": null
+   },
+   "grade": 5,
+   "fit": "regular",
+   "cut": "men"
+  },
+  "street": true
+ },
+ "flannel": {
+  "file": "flannel.glb",
+  "slot": "top",
+  "name": "Plaid flannel shirt",
+  "tint": false,
+  "tris": 70000,
+  "box": [
+   [
+    -0.431,
+    -0.233,
+    0.684
+   ],
+   [
+    0.424,
+    0.21,
+    1.516
+   ]
+  ],
+  "kb": 883,
+  "credit": {
+   "title": "men's caro flannel shirt",
+   "author": "funlab117",
+   "username": "funlab117",
+   "license": "CC Attribution",
+   "url": "https://sketchfab.com/3d-models/mens-caro-flannel-shirt-0af9b1465e8e46fa92e93f8bcad0a705"
+  },
+  "size": {
+   "M": {
+    "chest": 116,
+    "waist": 112,
+    "hips": null
+   },
+   "grade": 5,
+   "fit": "relaxed",
+   "cut": "men"
+  },
+  "street": true
+ },
+ "hoodie": {
+  "file": "hoodie.glb",
+  "slot": "outer",
+  "name": "Zip hoodie",
+  "tint": true,
+  "tris": 49822,
+  "box": [
+   [
+    -0.483,
+    -0.11,
+    0.809
+   ],
+   [
+    0.484,
+    0.114,
+    1.676
+   ]
+  ],
+  "kb": 590,
+  "credit": {
+   "title": "Hoodie",
+   "author": "Pieter Ferreira",
+   "username": "Badboy17Aiden",
+   "license": "CC Attribution",
+   "url": "https://sketchfab.com/3d-models/hoodie-6dca9cd855a8441881f0b324236cf325"
+  },
+  "size": {
+   "M": {
+    "chest": 116,
+    "waist": null,
+    "hips": null
+   },
+   "grade": 6,
+   "fit": "relaxed",
+   "cut": "unisex"
+  },
+  "street": true
+ },
+ "cargo_jeans": {
+  "file": "cargo_jeans.glb",
+  "slot": "bottom",
+  "name": "Wide cargo jeans",
+  "tint": true,
+  "tris": 70000,
+  "box": [
+   [
+    -0.201,
+    -0.164,
+    0.002
+   ],
+   [
+    0.193,
+    0.142,
+    1.014
+   ]
+  ],
+  "kb": 507,
+  "credit": {
+   "title": "VETEMENTS Cargo Jeans / Wide-Leg Track Pants",
+   "author": "SKVORSOW",
+   "username": "SKVORSOW",
+   "license": "CC Attribution",
+   "url": "https://sketchfab.com/3d-models/vetements-cargo-jeans-wide-leg-track-pants-a9067eecf6d24e75bdf28345027e7552"
+  },
+  "size": {
+   "M": {
+    "chest": null,
+    "waist": 84,
+    "hips": 118
+   },
+   "grade": 5,
+   "fit": "wide",
+   "cut": "unisex"
+  },
+  "street": true
+ },
+ "baggy_jeans": {
+  "file": "baggy_jeans.glb",
+  "slot": "bottom",
+  "name": "Baggy jeans",
+  "tint": false,
+  "tris": 70000,
+  "box": [
+   [
+    -0.251,
+    -0.157,
+    0.006
+   ],
+   [
+    0.25,
+    0.149,
+    1.026
+   ]
+  ],
+  "kb": 1187,
+  "credit": {
+   "title": "Oversized Baggy Custom Jeans",
+   "author": "SKVORSOW",
+   "username": "SKVORSOW",
+   "license": "CC Attribution",
+   "url": "https://sketchfab.com/3d-models/oversized-baggy-custom-jeans-a663bab1b858417da8c1b1765793309d"
+  },
+  "size": {
+   "M": {
+    "chest": null,
+    "waist": 84,
+    "hips": 124
+   },
+   "grade": 5,
+   "fit": "baggy",
+   "cut": "unisex"
+  },
+  "street": true
+ },
+ "short_jeans": {
+  "file": "short_jeans.glb",
+  "slot": "bottom",
+  "name": "Denim shorts",
+  "tint": false,
+  "tris": 13782,
+  "box": [
+   [
+    -0.179,
+    -0.127,
+    0.647
+   ],
+   [
+    0.18,
+    0.128,
+    0.981
+   ]
+  ],
+  "kb": 629,
+  "credit": {
+   "title": "female short jeans",
+   "author": "Toxic",
+   "username": "wutianci",
+   "license": "CC Attribution",
+   "url": "https://sketchfab.com/3d-models/female-short-jeans-6b42c4a5591e4122940bd0fccde6f2f8"
+  },
+  "size": {
+   "M": {
+    "chest": null,
+    "waist": 72,
+    "hips": 98
+   },
+   "grade": 5,
+   "fit": "fitted",
+   "cut": "women"
+  },
+  "barelegs": true
+ },
+ "plaid_skirt": {
+  "file": "plaid_skirt.glb",
+  "slot": "bottom",
+  "name": "Plaid pleated mini skirt",
+  "tint": false,
+  "tris": 8430,
+  "box": [
+   [
+    -0.213,
+    -0.163,
+    0.577
+   ],
+   [
+    0.219,
+    0.166,
+    1.003
+   ]
+  ],
+  "kb": 2027,
+  "credit": {
+   "title": "Plaid Gothic Mini Skirt",
+   "author": "Yasmany Batista",
+   "username": "Yazz_ll",
+   "license": "CC Attribution",
+   "url": "https://sketchfab.com/3d-models/plaid-gothic-mini-skirt-7a1869479e58422b84ad18533b5b4439"
+  },
+  "size": {
+   "M": {
+    "chest": null,
+    "waist": 72,
+    "hips": 104
+   },
+   "grade": 5,
+   "fit": "fitted waist",
+   "cut": "women"
+  },
+  "barelegs": true
+ },
+ "converse": {
+  "file": "converse.glb",
+  "slot": "shoes",
+  "name": "High-top canvas sneakers",
+  "tint": true,
+  "tris": 30000,
+  "box": [
+   [
+    0.04,
+    -0.187,
+    -0.001
+   ],
+   [
+    0.16,
+    0.107,
+    0.163
+   ]
+  ],
+  "kb": 871,
+  "credit": {
+   "title": "Converse \u2014 FREE",
+   "author": "Yaroslav Karas",
+   "username": "yakaras",
+   "license": "CC Attribution",
+   "url": "https://sketchfab.com/3d-models/converse-free-bc791439d26f4dd9974819c168e12385"
+  },
+  "street": true
+ },
+ "adidas": {
+  "file": "adidas.glb",
+  "slot": "shoes",
+  "name": "Leopard running sneakers",
+  "tint": false,
+  "tris": 24670,
+  "box": [
+   [
+    0.022,
+    -0.184,
+    -0.003
+   ],
+   [
+    0.177,
+    0.103,
+    0.342
+   ]
+  ],
+  "kb": 1894,
+  "credit": {
+   "title": "Adidas Racer TR21",
+   "author": "inciprocal",
+   "username": "inciprocal.com",
+   "license": "CC Attribution",
+   "url": "https://sketchfab.com/3d-models/adidas-racer-tr21-bc0d0141da164d3c9f9fe71f6f340c9b"
+  },
+  "street": true
+ },
+ "evening_dress": {
+  "file": "evening_dress.glb",
+  "slot": "dress",
+  "name": "Draped maxi dress",
+  "tint": true,
+  "pair": false,
+  "tris": 19790,
+  "box": [
+   [
+    -0.258,
+    -0.196,
+    -0.022
+   ],
+   [
+    0.26,
+    0.197,
+    1.495
+   ]
+  ],
+  "kb": 71,
+  "credit": {
+   "title": "Long Evening Dress",
+   "author": "samsikua",
+   "username": "samsikua",
+   "license": "CC Attribution",
+   "url": "https://sketchfab.com/3d-models/long-evening-dress-05874623f9c34a63984e011579b29394"
+  },
+  "size": {
+   "M": {
+    "chest": 92,
+    "waist": 96,
+    "hips": 120
+   },
+   "grade": 5,
+   "fit": "draped",
+   "cut": "women"
+  }
+ },
+ "red_dress": {
+  "file": "red_dress.glb",
+  "slot": "dress",
+  "name": "Cocktail dress",
+  "tint": true,
+  "pair": false,
+  "tris": 6546,
+  "box": [
+   [
+    -0.263,
+    -0.162,
+    0.251
+   ],
+   [
+    0.252,
+    0.161,
+    1.448
+   ]
+  ],
+  "kb": 37,
+  "credit": {
+   "title": "Evening Red Dress",
+   "author": "samsikua",
+   "username": "samsikua",
+   "license": "CC Attribution",
+   "url": "https://sketchfab.com/3d-models/evening-red-dress-0e8acea5f2a14f08947837001bb0992d"
+  },
+  "size": {
+   "M": {
+    "chest": 90,
+    "waist": 76,
+    "hips": 112
+   },
+   "grade": 5,
+   "fit": "fitted",
+   "cut": "women"
+  },
+  "barelegs": true
+ },
+ "black_dress": {
+  "file": "black_dress.glb",
+  "slot": "dress",
+  "name": "Black dress with bolero",
+  "tint": false,
+  "pair": false,
+  "tris": 69999,
+  "box": [
+   [
+    -0.519,
+    -0.493,
+    0.468
+   ],
+   [
+    0.519,
+    0.463,
+    1.531
+   ]
+  ],
+  "kb": 1137,
+  "credit": {
+   "title": "Black Dress",
+   "author": "Konstantin R.",
+   "username": "Prepadoshniy",
+   "license": "CC Attribution",
+   "url": "https://sketchfab.com/3d-models/black-dress-c0516d4bba74464ca6a04b634cdf550b"
+  },
+  "size": {
+   "M": {
+    "chest": 90,
+    "waist": 74,
+    "hips": 150
+   },
+   "grade": 5,
+   "fit": "fitted bodice",
+   "cut": "women"
+  },
+  "barelegs": true,
+  "street": true
+ },
+ "overcoat": {
+  "file": "overcoat.glb",
+  "slot": "outer",
+  "name": "Double-breasted coat",
+  "tint": true,
+  "pair": false,
+  "closed": true,
+  "tris": 14344,
+  "box": [
+   [
+    -0.676,
+    -0.178,
+    0.498
+   ],
+   [
+    0.678,
+    0.188,
+    1.526
+   ]
+  ],
+  "kb": 617,
+  "credit": {
+   "title": "Female Overcoat",
+   "author": "3DGunsmith",
+   "username": "3DGunsmith",
+   "license": "CC Attribution",
+   "url": "https://sketchfab.com/3d-models/female-overcoat-4bc89e3be7fb4c11b3b1153e9ea384dd"
+  },
+  "size": {
+   "M": {
+    "chest": 112,
+    "waist": 106,
+    "hips": 112
+   },
+   "grade": 5,
+   "fit": "tailored",
+   "cut": "unisex"
+  }
+ },
+ "parka": {
+  "file": "parka.glb",
+  "slot": "outer",
+  "name": "Padded parka",
+  "tint": true,
+  "pair": false,
+  "closed": true,
+  "tris": 69999,
+  "box": [
+   [
+    -0.327,
+    -0.2,
+    0.502
+   ],
+   [
+    0.329,
+    0.217,
+    1.712
+   ]
+  ],
+  "kb": 1402,
+  "credit": {
+   "title": "Pale Green Padded Parka Coat",
+   "author": "2021-Hydrema912-2021",
+   "username": "Hydrema912-2021",
+   "license": "CC Attribution",
+   "url": "https://sketchfab.com/3d-models/pale-green-padded-parka-coat-3ef9e8b2dcf344f281eeec498103c401"
+  },
+  "size": {
+   "M": {
+    "chest": 122,
+    "waist": 122,
+    "hips": 126
+   },
+   "grade": 6,
+   "fit": "relaxed",
+   "cut": "unisex"
+  },
+  "plain": true,
+  "street": true,
+  "lining": true
+ },
+ "pumps": {
+  "file": "pumps.glb",
+  "slot": "shoes",
+  "name": "Pointed pumps",
+  "tint": true,
+  "pair": true,
+  "closed": false,
+  "tris": 29999,
+  "box": [
+   [
+    -0.11,
+    -0.166,
+    -0.001
+   ],
+   [
+    0.11,
+    0.086,
+    0.197
+   ]
+  ],
+  "kb": 141,
+  "credit": {
+   "title": "Classic high heel pumps",
+   "author": "Andrey",
+   "username": "Earl_1",
+   "license": "CC Attribution",
+   "url": "https://sketchfab.com/3d-models/classic-high-heel-pumps-e968fd35a2f1474996bc1536ae85970f"
+  },
+  "street": true
+ },
+ "heels": {
+  "file": "heels.glb",
+  "slot": "shoes",
+  "name": "Strappy heels",
+  "tint": false,
+  "pair": true,
+  "tris": 30000,
+  "box": [
+   [
+    -0.101,
+    -0.169,
+    -0.0
+   ],
+   [
+    0.101,
+    0.088,
+    0.151
+   ]
+  ],
+  "kb": 876,
+  "credit": {
+   "title": "High Heels",
+   "author": "cebraVFX",
+   "username": "intervirtual",
+   "license": "CC Attribution",
+   "url": "https://sketchfab.com/3d-models/high-heels-1561c09fc45349d680e48e3e007b64e0"
+  },
+  "street": true
+ },
+ "chelsea": {
+  "file": "chelsea.glb",
+  "slot": "shoes",
+  "name": "Chelsea boots",
+  "tint": true,
+  "pair": false,
+  "tris": 5434,
+  "box": [
+   [
+    0.056,
+    -0.176,
+    -0.0
+   ],
+   [
+    0.144,
+    0.096,
+    0.196
+   ]
+  ],
+  "kb": 412,
+  "credit": {
+   "title": "Womens chelsea boot black",
+   "author": "victorn8c",
+   "username": "victorn8c",
+   "license": "CC Attribution",
+   "url": "https://sketchfab.com/3d-models/womens-chelsea-boot-black-459c0864e8cc441cb12cd50566479844"
+  }
+ },
+ "riding_boot": {
+  "file": "riding_boot.glb",
+  "slot": "shoes",
+  "name": "Quilted riding boots",
+  "tint": true,
+  "pair": false,
+  "tris": 29902,
+  "box": [
+   [
+    -0.021,
+    -0.183,
+    -0.001
+   ],
+   [
+    0.225,
+    0.107,
+    0.546
+   ]
+  ],
+  "kb": 1281,
+  "credit": {
+   "title": "Coraline Riding Boot",
+   "author": "inciprocal",
+   "username": "inciprocal.com",
+   "license": "CC Attribution",
+   "url": "https://sketchfab.com/3d-models/coraline-riding-boot-e0aec450be8e45ab888613b3a44d26a6"
+  },
+  "street": true
+ },
+ "bucket_hat": {
+  "file": "bucket_hat.glb",
+  "slot": "hat",
+  "name": "Bucket hat",
+  "tint": true,
+  "pair": false,
+  "tris": 70000,
+  "box": [
+   [
+    -0.176,
+    -0.176,
+    1.615
+   ],
+   [
+    0.176,
+    0.176,
+    1.789
+   ]
+  ],
+  "kb": 489,
+  "credit": {
+   "title": "Bucket Hat",
+   "author": "Boxroom 3D",
+   "username": "Boxroom_3D",
+   "license": "CC Attribution",
+   "url": "https://sketchfab.com/3d-models/bucket-hat-38d07cea51d04e9fb419376d1fdaa77e"
+  },
+  "street": true
+ },
+ "cap": {
+  "file": "cap.glb",
+  "slot": "hat",
+  "name": "Baseball cap",
+  "tint": true,
+  "pair": false,
+  "tris": 70000,
+  "box": [
+   [
+    -0.099,
+    -0.138,
+    1.639
+   ],
+   [
+    0.099,
+    0.136,
+    1.776
+   ]
+  ],
+  "kb": 902,
+  "credit": {
+   "title": "Baseball Cap",
+   "author": "Scott VanArsdale",
+   "username": "vanart",
+   "license": "CC Attribution",
+   "url": "https://sketchfab.com/3d-models/baseball-cap-1c1d34d73fd94e6b9e8f82b1eb7194a0"
+  },
+  "street": true
+ },
+ "handbag": {
+  "file": "handbag.glb",
+  "slot": "bag",
+  "name": "Leather handbag",
+  "tint": false,
+  "pair": false,
+  "tris": 70000,
+  "box": [
+   [
+    0.269,
+    -0.187,
+    0.72
+   ],
+   [
+    0.452,
+    0.186,
+    0.987
+   ]
+  ],
+  "kb": 1463,
+  "credit": {
+   "title": "Worn leather handbag",
+   "author": "Lassi Kaukonen",
+   "username": "thesidekick",
+   "license": "CC Attribution",
+   "url": "https://sketchfab.com/3d-models/worn-leather-handbag-0732e0dfee7747e49cef95f3d179d880"
+  },
+  "street": true
+ }
+}

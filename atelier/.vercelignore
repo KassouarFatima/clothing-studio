@@ -1,0 +1,16 @@
+# not needed online (or private)
+.env
+output/
+blender/
+node_modules/
+server.log
+*.command
+# the old v1 page and its large files
+public/world.html
+public/world.js
+public/assets/outdoor_umbrellas_4k.hdr
+public/models/Xbot.glb
+.env.local
+.vercel/
+
+public/_*

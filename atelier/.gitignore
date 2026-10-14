@@ -1,0 +1,14 @@
+.env
+node_modules
+output/
+server.log
+.DS_Store
+
+# raw downloads (re-fetched by the scripts); only the prepared garments in public/models/garments are kept
+blender/hbm/
+blender/sketchfab/*.glb
+blender/*.blend
+.vercel
+.env*
+!.env.example
+public/_*

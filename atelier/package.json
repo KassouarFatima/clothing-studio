@@ -1,0 +1,23 @@
+{
+  "name": "atelier-city",
+  "version": "1.0.0",
+  "description": "AI t-shirt studio in a walkable 3D Japanese street: chat with an AI tailor, generate designs, try them on, download print files.",
+  "main": "server.mjs",
+  "scripts": {
+    "start": "node server.mjs",
+    "deploy": "GIT_DIR=/nonexistent vercel deploy --prod --yes"
+  },
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "@gradio/client": "^1.19.1",
+    "archiver": "^8.0.0",
+    "imagetracerjs": "^1.2.6",
+    "pdfkit": "^0.20.2",
+    "sharp": "^0.35.5",
+    "@vercel/blob": "^2.8.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

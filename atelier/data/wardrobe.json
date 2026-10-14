@@ -1,0 +1,1588 @@
+{
+ "pieces": [
+  {
+   "id": "tee-white",
+   "asset": "tshirt",
+   "name": "White tee",
+   "tags": [
+    "basic",
+    "minimal",
+    "summer"
+   ],
+   "color": "#f2f1ee"
+  },
+  {
+   "id": "tee-black",
+   "asset": "tshirt",
+   "name": "Black tee",
+   "tags": [
+    "basic",
+    "minimal",
+    "rock",
+    "streetwear"
+   ],
+   "color": "#141414"
+  },
+  {
+   "id": "tee-heather-grey",
+   "asset": "tshirt",
+   "name": "Heather grey tee",
+   "tags": [
+    "basic",
+    "sporty"
+   ],
+   "color": "#7d8085"
+  },
+  {
+   "id": "tee-navy",
+   "asset": "tshirt",
+   "name": "Navy tee",
+   "tags": [
+    "classic",
+    "preppy"
+   ],
+   "color": "#1b2340"
+  },
+  {
+   "id": "tee-red",
+   "asset": "tshirt",
+   "name": "Red tee",
+   "tags": [
+    "bold",
+    "casual"
+   ],
+   "color": "#9b1c1f"
+  },
+  {
+   "id": "tee-forest-green",
+   "asset": "tshirt",
+   "name": "Forest green tee",
+   "tags": [
+    "outdoor",
+    "autumn"
+   ],
+   "color": "#2e4a36"
+  },
+  {
+   "id": "tee-sand",
+   "asset": "tshirt",
+   "name": "Sand tee",
+   "tags": [
+    "minimal",
+    "summer"
+   ],
+   "color": "#d8c6a5"
+  },
+  {
+   "id": "tee-pink",
+   "asset": "tshirt",
+   "name": "Pink tee",
+   "tags": [
+    "spring",
+    "soft"
+   ],
+   "color": "#e8a6b8"
+  },
+  {
+   "id": "shirt-white",
+   "asset": "mens_shirt",
+   "name": "White dress shirt",
+   "tags": [
+    "office",
+    "smart",
+    "classic"
+   ],
+   "color": "#f2f1ee"
+  },
+  {
+   "id": "shirt-light-blue",
+   "asset": "mens_shirt",
+   "name": "Light blue dress shirt",
+   "tags": [
+    "office",
+    "business",
+    "smart"
+   ],
+   "color": "#a9c1dc"
+  },
+  {
+   "id": "shirt-pale-pink",
+   "asset": "mens_shirt",
+   "name": "Pale pink dress shirt",
+   "tags": [
+    "smart",
+    "spring"
+   ],
+   "color": "#e8c9cf"
+  },
+  {
+   "id": "shirt-black",
+   "asset": "mens_shirt",
+   "name": "Black dress shirt",
+   "tags": [
+    "evening",
+    "minimal"
+   ],
+   "color": "#141414"
+  },
+  {
+   "id": "flannel-blue",
+   "asset": "flannel",
+   "name": "Blue plaid flannel shirt",
+   "tags": [
+    "grunge",
+    "90s",
+    "workwear",
+    "autumn",
+    "casual"
+   ]
+  },
+  {
+   "id": "hoodie-grey",
+   "asset": "hoodie",
+   "name": "Grey zip hoodie",
+   "tags": [
+    "streetwear",
+    "cozy",
+    "sporty"
+   ],
+   "color": "#7d8085"
+  },
+  {
+   "id": "hoodie-black",
+   "asset": "hoodie",
+   "name": "Black zip hoodie",
+   "tags": [
+    "streetwear",
+    "urban"
+   ],
+   "color": "#141414"
+  },
+  {
+   "id": "hoodie-navy",
+   "asset": "hoodie",
+   "name": "Navy zip hoodie",
+   "tags": [
+    "casual",
+    "sporty"
+   ],
+   "color": "#1b2340"
+  },
+  {
+   "id": "hoodie-olive",
+   "asset": "hoodie",
+   "name": "Olive zip hoodie",
+   "tags": [
+    "outdoor",
+    "streetwear"
+   ],
+   "color": "#4a5236"
+  },
+  {
+   "id": "hoodie-cream",
+   "asset": "hoodie",
+   "name": "Cream zip hoodie",
+   "tags": [
+    "minimal",
+    "cozy"
+   ],
+   "color": "#ece4d4"
+  },
+  {
+   "id": "cargo-black",
+   "asset": "cargo_jeans",
+   "name": "Black wide cargo pants",
+   "tags": [
+    "streetwear",
+    "techwear",
+    "urban"
+   ],
+   "color": "#141414"
+  },
+  {
+   "id": "cargo-olive",
+   "asset": "cargo_jeans",
+   "name": "Olive wide cargo pants",
+   "tags": [
+    "military",
+    "outdoor",
+    "streetwear"
+   ],
+   "color": "#4a5236"
+  },
+  {
+   "id": "cargo-khaki",
+   "asset": "cargo_jeans",
+   "name": "Khaki wide cargo pants",
+   "tags": [
+    "workwear",
+    "outdoor"
+   ],
+   "color": "#c8b48a"
+  },
+  {
+   "id": "cargo-grey",
+   "asset": "cargo_jeans",
+   "name": "Grey wide cargo pants",
+   "tags": [
+    "streetwear",
+    "urban"
+   ],
+   "color": "#7d8085"
+  },
+  {
+   "id": "baggy-jeans",
+   "asset": "baggy_jeans",
+   "name": "Light-wash baggy jeans",
+   "tags": [
+    "y2k",
+    "streetwear",
+    "90s",
+    "relaxed"
+   ]
+  },
+  {
+   "id": "denim-shorts",
+   "asset": "short_jeans",
+   "name": "Light denim shorts",
+   "tags": [
+    "summer",
+    "festival",
+    "casual",
+    "beach"
+   ]
+  },
+  {
+   "id": "plaid-skirt",
+   "asset": "plaid_skirt",
+   "name": "Red plaid pleated mini skirt",
+   "tags": [
+    "grunge",
+    "preppy",
+    "y2k",
+    "school"
+   ]
+  },
+  {
+   "id": "hightops-red",
+   "asset": "converse",
+   "name": "Red high-top sneakers",
+   "tags": [
+    "casual",
+    "streetwear",
+    "retro"
+   ],
+   "color": "#9b1c1f"
+  },
+  {
+   "id": "hightops-black",
+   "asset": "converse",
+   "name": "Black high-top sneakers",
+   "tags": [
+    "rock",
+    "grunge",
+    "streetwear"
+   ],
+   "color": "#141414"
+  },
+  {
+   "id": "hightops-white",
+   "asset": "converse",
+   "name": "White high-top sneakers",
+   "tags": [
+    "minimal",
+    "summer",
+    "casual"
+   ],
+   "color": "#f2f1ee"
+  },
+  {
+   "id": "hightops-navy",
+   "asset": "converse",
+   "name": "Navy high-top sneakers",
+   "tags": [
+    "preppy",
+    "casual"
+   ],
+   "color": "#1b2340"
+  },
+  {
+   "id": "hightops-cream",
+   "asset": "converse",
+   "name": "Cream high-top sneakers",
+   "tags": [
+    "minimal",
+    "vintage"
+   ],
+   "color": "#ece4d4"
+  },
+  {
+   "id": "leopard-runners",
+   "asset": "adidas",
+   "name": "Leopard running sneakers",
+   "tags": [
+    "bold",
+    "sporty",
+    "y2k",
+    "party"
+   ]
+  },
+  {
+   "id": "maxi-saffron",
+   "asset": "evening_dress",
+   "name": "Saffron draped maxi dress",
+   "tags": [
+    "summer",
+    "boho",
+    "vacation"
+   ],
+   "color": "#e8a33c"
+  },
+  {
+   "id": "maxi-midnight-blue",
+   "asset": "evening_dress",
+   "name": "Midnight blue draped maxi dress",
+   "tags": [
+    "evening",
+    "elegant",
+    "wedding"
+   ],
+   "color": "#2a2f45"
+  },
+  {
+   "id": "maxi-black",
+   "asset": "evening_dress",
+   "name": "Black draped maxi dress",
+   "tags": [
+    "evening",
+    "elegant",
+    "minimal"
+   ],
+   "color": "#141414"
+  },
+  {
+   "id": "maxi-sage",
+   "asset": "evening_dress",
+   "name": "Sage draped maxi dress",
+   "tags": [
+    "summer",
+    "wedding",
+    "soft"
+   ],
+   "color": "#8a9a7b"
+  },
+  {
+   "id": "maxi-blush",
+   "asset": "evening_dress",
+   "name": "Blush draped maxi dress",
+   "tags": [
+    "wedding",
+    "romantic",
+    "spring"
+   ],
+   "color": "#e8c9cf"
+  },
+  {
+   "id": "cocktail-red",
+   "asset": "red_dress",
+   "name": "Red cocktail dress",
+   "tags": [
+    "party",
+    "evening",
+    "bold"
+   ],
+   "color": "#c0281f"
+  },
+  {
+   "id": "cocktail-black",
+   "asset": "red_dress",
+   "name": "Black cocktail dress",
+   "tags": [
+    "party",
+    "evening",
+    "minimal"
+   ],
+   "color": "#141414"
+  },
+  {
+   "id": "cocktail-emerald",
+   "asset": "red_dress",
+   "name": "Emerald cocktail dress",
+   "tags": [
+    "party",
+    "evening"
+   ],
+   "color": "#1f6f5a"
+  },
+  {
+   "id": "cocktail-champagne",
+   "asset": "red_dress",
+   "name": "Champagne cocktail dress",
+   "tags": [
+    "wedding",
+    "party"
+   ],
+   "color": "#d9c3a0"
+  },
+  {
+   "id": "dress-bolero",
+   "asset": "black_dress",
+   "name": "Black dress with bolero",
+   "tags": [
+    "evening",
+    "gothic",
+    "elegant",
+    "winter"
+   ]
+  },
+  {
+   "id": "coat-navy",
+   "asset": "overcoat",
+   "name": "Navy double-breasted coat",
+   "tags": [
+    "classic",
+    "office",
+    "winter",
+    "smart"
+   ],
+   "color": "#1b2340"
+  },
+  {
+   "id": "coat-camel",
+   "asset": "overcoat",
+   "name": "Camel double-breasted coat",
+   "tags": [
+    "classic",
+    "old money",
+    "winter",
+    "chic"
+   ],
+   "color": "#b88a5a"
+  },
+  {
+   "id": "coat-black",
+   "asset": "overcoat",
+   "name": "Black double-breasted coat",
+   "tags": [
+    "minimal",
+    "evening",
+    "winter"
+   ],
+   "color": "#141414"
+  },
+  {
+   "id": "coat-charcoal",
+   "asset": "overcoat",
+   "name": "Charcoal double-breasted coat",
+   "tags": [
+    "office",
+    "winter",
+    "classic"
+   ],
+   "color": "#5c5f66"
+  },
+  {
+   "id": "parka-cream",
+   "asset": "parka",
+   "name": "Cream padded parka",
+   "tags": [
+    "winter",
+    "outdoor",
+    "cozy"
+   ],
+   "color": "#e8e4d0"
+  },
+  {
+   "id": "parka-black",
+   "asset": "parka",
+   "name": "Black padded parka",
+   "tags": [
+    "winter",
+    "urban"
+   ],
+   "color": "#141414"
+  },
+  {
+   "id": "parka-olive",
+   "asset": "parka",
+   "name": "Olive padded parka",
+   "tags": [
+    "winter",
+    "outdoor",
+    "military"
+   ],
+   "color": "#4a5236"
+  },
+  {
+   "id": "parka-tan",
+   "asset": "parka",
+   "name": "Tan padded parka",
+   "tags": [
+    "winter",
+    "outdoor"
+   ],
+   "color": "#8a5a3a"
+  },
+  {
+   "id": "pumps-black",
+   "asset": "pumps",
+   "name": "Black pointed pumps",
+   "tags": [
+    "office",
+    "evening",
+    "elegant"
+   ],
+   "color": "#141414"
+  },
+  {
+   "id": "pumps-nude",
+   "asset": "pumps",
+   "name": "Nude pointed pumps",
+   "tags": [
+    "elegant",
+    "wedding",
+    "summer"
+   ],
+   "color": "#d6b89a"
+  },
+  {
+   "id": "pumps-red",
+   "asset": "pumps",
+   "name": "Red pointed pumps",
+   "tags": [
+    "party",
+    "bold"
+   ],
+   "color": "#c0281f"
+  },
+  {
+   "id": "heels-strappy",
+   "asset": "heels",
+   "name": "Black & white strappy heels",
+   "tags": [
+    "evening",
+    "party",
+    "glam"
+   ]
+  },
+  {
+   "id": "chelsea-black",
+   "asset": "chelsea",
+   "name": "Black Chelsea boots",
+   "tags": [
+    "rock",
+    "smart",
+    "winter",
+    "minimal"
+   ],
+   "color": "#141414"
+  },
+  {
+   "id": "chelsea-brown",
+   "asset": "chelsea",
+   "name": "Brown Chelsea boots",
+   "tags": [
+    "classic",
+    "autumn",
+    "smart"
+   ],
+   "color": "#6b4226"
+  },
+  {
+   "id": "riding-black",
+   "asset": "riding_boot",
+   "name": "Black quilted riding boots",
+   "tags": [
+    "classic",
+    "winter",
+    "equestrian"
+   ],
+   "color": "#141414"
+  },
+  {
+   "id": "riding-chocolate",
+   "asset": "riding_boot",
+   "name": "Chocolate quilted riding boots",
+   "tags": [
+    "autumn",
+    "classic",
+    "old money"
+   ],
+   "color": "#5a3a24"
+  },
+  {
+   "id": "bucket-black",
+   "asset": "bucket_hat",
+   "name": "Black bucket hat",
+   "tags": [
+    "streetwear",
+    "90s",
+    "festival"
+   ],
+   "color": "#141414"
+  },
+  {
+   "id": "bucket-sand",
+   "asset": "bucket_hat",
+   "name": "Sand bucket hat",
+   "tags": [
+    "summer",
+    "beach",
+    "festival"
+   ],
+   "color": "#e8dcc0"
+  },
+  {
+   "id": "bucket-denim-blue",
+   "asset": "bucket_hat",
+   "name": "Denim blue bucket hat",
+   "tags": [
+    "90s",
+    "casual"
+   ],
+   "color": "#3b5a85"
+  },
+  {
+   "id": "cap-black",
+   "asset": "cap",
+   "name": "Black baseball cap",
+   "tags": [
+    "streetwear",
+    "sporty",
+    "urban"
+   ],
+   "color": "#141414"
+  },
+  {
+   "id": "cap-white",
+   "asset": "cap",
+   "name": "White baseball cap",
+   "tags": [
+    "sporty",
+    "summer"
+   ],
+   "color": "#f2f1ee"
+  },
+  {
+   "id": "cap-navy",
+   "asset": "cap",
+   "name": "Navy baseball cap",
+   "tags": [
+    "preppy",
+    "sporty"
+   ],
+   "color": "#1b2340"
+  },
+  {
+   "id": "handbag-brown",
+   "asset": "handbag",
+   "name": "Worn brown leather handbag",
+   "tags": [
+    "vintage",
+    "classic",
+    "chic"
+   ]
+  },
+  {
+   "id": "tee-lemon",
+   "asset": "tshirt",
+   "name": "Lemon tee",
+   "tags": [
+    "colourful",
+    "summer",
+    "casual"
+   ],
+   "color": "#f0d64a"
+  },
+  {
+   "id": "tee-cobalt",
+   "asset": "tshirt",
+   "name": "Cobalt tee",
+   "tags": [
+    "colourful",
+    "casual",
+    "summer"
+   ],
+   "color": "#2e5fa8"
+  },
+  {
+   "id": "tee-mustard",
+   "asset": "tshirt",
+   "name": "Mustard tee",
+   "tags": [
+    "colourful",
+    "casual",
+    "summer"
+   ],
+   "color": "#d9a330"
+  },
+  {
+   "id": "tee-orange",
+   "asset": "tshirt",
+   "name": "Orange tee",
+   "tags": [
+    "colourful",
+    "casual",
+    "summer"
+   ],
+   "color": "#e07a2a"
+  },
+  {
+   "id": "tee-lilac",
+   "asset": "tshirt",
+   "name": "Lilac tee",
+   "tags": [
+    "colourful",
+    "casual",
+    "summer"
+   ],
+   "color": "#b7a3d9"
+  },
+  {
+   "id": "tee-mint",
+   "asset": "tshirt",
+   "name": "Mint tee",
+   "tags": [
+    "colourful",
+    "casual",
+    "summer"
+   ],
+   "color": "#9fd8c0"
+  },
+  {
+   "id": "tee-sky",
+   "asset": "tshirt",
+   "name": "Sky tee",
+   "tags": [
+    "colourful",
+    "casual",
+    "summer"
+   ],
+   "color": "#8fc1e8"
+  },
+  {
+   "id": "tee-coral",
+   "asset": "tshirt",
+   "name": "Coral tee",
+   "tags": [
+    "colourful",
+    "casual",
+    "summer"
+   ],
+   "color": "#e8705a"
+  },
+  {
+   "id": "hoodie-cobalt",
+   "asset": "hoodie",
+   "name": "Cobalt zip hoodie",
+   "tags": [
+    "colourful",
+    "streetwear",
+    "cozy"
+   ],
+   "color": "#2e5fa8"
+  },
+  {
+   "id": "hoodie-mustard",
+   "asset": "hoodie",
+   "name": "Mustard zip hoodie",
+   "tags": [
+    "colourful",
+    "streetwear",
+    "cozy"
+   ],
+   "color": "#d9a330"
+  },
+  {
+   "id": "hoodie-pink",
+   "asset": "hoodie",
+   "name": "Pink zip hoodie",
+   "tags": [
+    "colourful",
+    "streetwear",
+    "cozy"
+   ],
+   "color": "#e8a6b8"
+  },
+  {
+   "id": "hoodie-orange",
+   "asset": "hoodie",
+   "name": "Orange zip hoodie",
+   "tags": [
+    "colourful",
+    "streetwear",
+    "cozy"
+   ],
+   "color": "#e07a2a"
+  },
+  {
+   "id": "hoodie-mint",
+   "asset": "hoodie",
+   "name": "Mint zip hoodie",
+   "tags": [
+    "colourful",
+    "streetwear",
+    "cozy"
+   ],
+   "color": "#9fd8c0"
+  },
+  {
+   "id": "cargo-sand",
+   "asset": "cargo_jeans",
+   "name": "Sand wide cargo pants",
+   "tags": [
+    "colourful",
+    "streetwear"
+   ],
+   "color": "#d8c6a5"
+  },
+  {
+   "id": "cargo-sky",
+   "asset": "cargo_jeans",
+   "name": "Sky wide cargo pants",
+   "tags": [
+    "colourful",
+    "streetwear"
+   ],
+   "color": "#8fc1e8"
+  },
+  {
+   "id": "maxi-coral",
+   "asset": "evening_dress",
+   "name": "Coral draped maxi dress",
+   "tags": [
+    "colourful",
+    "summer",
+    "evening"
+   ],
+   "color": "#e8705a"
+  },
+  {
+   "id": "maxi-cobalt",
+   "asset": "evening_dress",
+   "name": "Cobalt draped maxi dress",
+   "tags": [
+    "colourful",
+    "summer",
+    "evening"
+   ],
+   "color": "#2e5fa8"
+  },
+  {
+   "id": "maxi-emerald",
+   "asset": "evening_dress",
+   "name": "Emerald draped maxi dress",
+   "tags": [
+    "colourful",
+    "summer",
+    "evening"
+   ],
+   "color": "#1f7a5a"
+  },
+  {
+   "id": "maxi-lilac",
+   "asset": "evening_dress",
+   "name": "Lilac draped maxi dress",
+   "tags": [
+    "colourful",
+    "summer",
+    "evening"
+   ],
+   "color": "#b7a3d9"
+  },
+  {
+   "id": "cocktail-fuchsia",
+   "asset": "red_dress",
+   "name": "Fuchsia cocktail dress",
+   "tags": [
+    "colourful",
+    "party"
+   ],
+   "color": "#c43d7e"
+  },
+  {
+   "id": "cocktail-cobalt",
+   "asset": "red_dress",
+   "name": "Cobalt cocktail dress",
+   "tags": [
+    "colourful",
+    "party"
+   ],
+   "color": "#2e5fa8"
+  },
+  {
+   "id": "cocktail-mustard",
+   "asset": "red_dress",
+   "name": "Mustard cocktail dress",
+   "tags": [
+    "colourful",
+    "party"
+   ],
+   "color": "#d9a330"
+  },
+  {
+   "id": "cocktail-sky",
+   "asset": "red_dress",
+   "name": "Sky cocktail dress",
+   "tags": [
+    "colourful",
+    "party"
+   ],
+   "color": "#8fc1e8"
+  },
+  {
+   "id": "coat-forest",
+   "asset": "overcoat",
+   "name": "Forest double-breasted coat",
+   "tags": [
+    "colourful",
+    "winter",
+    "classic"
+   ],
+   "color": "#2e4a36"
+  },
+  {
+   "id": "coat-cobalt",
+   "asset": "overcoat",
+   "name": "Cobalt double-breasted coat",
+   "tags": [
+    "colourful",
+    "winter",
+    "classic"
+   ],
+   "color": "#2e5fa8"
+  },
+  {
+   "id": "coat-burgundy",
+   "asset": "overcoat",
+   "name": "Burgundy double-breasted coat",
+   "tags": [
+    "colourful",
+    "winter",
+    "classic"
+   ],
+   "color": "#7a2335"
+  },
+  {
+   "id": "coat-terracotta",
+   "asset": "overcoat",
+   "name": "Terracotta double-breasted coat",
+   "tags": [
+    "colourful",
+    "winter",
+    "classic"
+   ],
+   "color": "#c0623e"
+  },
+  {
+   "id": "parka-red",
+   "asset": "parka",
+   "name": "Red padded parka",
+   "tags": [
+    "colourful",
+    "winter",
+    "outdoor"
+   ],
+   "color": "#c0281f"
+  },
+  {
+   "id": "parka-cobalt",
+   "asset": "parka",
+   "name": "Cobalt padded parka",
+   "tags": [
+    "colourful",
+    "winter",
+    "outdoor"
+   ],
+   "color": "#2e5fa8"
+  },
+  {
+   "id": "parka-mustard",
+   "asset": "parka",
+   "name": "Mustard padded parka",
+   "tags": [
+    "colourful",
+    "winter",
+    "outdoor"
+   ],
+   "color": "#d9a330"
+  },
+  {
+   "id": "parka-teal",
+   "asset": "parka",
+   "name": "Teal padded parka",
+   "tags": [
+    "colourful",
+    "winter",
+    "outdoor"
+   ],
+   "color": "#1f7a80"
+  },
+  {
+   "id": "hightops-lemon",
+   "asset": "converse",
+   "name": "Lemon high-top sneakers",
+   "tags": [
+    "colourful",
+    "casual"
+   ],
+   "color": "#f0d64a"
+  },
+  {
+   "id": "hightops-emerald",
+   "asset": "converse",
+   "name": "Emerald high-top sneakers",
+   "tags": [
+    "colourful",
+    "casual"
+   ],
+   "color": "#1f7a5a"
+  },
+  {
+   "id": "hightops-pink",
+   "asset": "converse",
+   "name": "Pink high-top sneakers",
+   "tags": [
+    "colourful",
+    "casual"
+   ],
+   "color": "#e8a6b8"
+  },
+  {
+   "id": "hightops-sky",
+   "asset": "converse",
+   "name": "Sky high-top sneakers",
+   "tags": [
+    "colourful",
+    "casual"
+   ],
+   "color": "#8fc1e8"
+  },
+  {
+   "id": "hightops-orange",
+   "asset": "converse",
+   "name": "Orange high-top sneakers",
+   "tags": [
+    "colourful",
+    "casual"
+   ],
+   "color": "#e07a2a"
+  },
+  {
+   "id": "pumps-cobalt",
+   "asset": "pumps",
+   "name": "Cobalt pointed pumps",
+   "tags": [
+    "colourful",
+    "party",
+    "elegant"
+   ],
+   "color": "#2e5fa8"
+  },
+  {
+   "id": "pumps-emerald",
+   "asset": "pumps",
+   "name": "Emerald pointed pumps",
+   "tags": [
+    "colourful",
+    "party",
+    "elegant"
+   ],
+   "color": "#1f7a5a"
+  },
+  {
+   "id": "pumps-fuchsia",
+   "asset": "pumps",
+   "name": "Fuchsia pointed pumps",
+   "tags": [
+    "colourful",
+    "party",
+    "elegant"
+   ],
+   "color": "#c43d7e"
+  },
+  {
+   "id": "cap-red",
+   "asset": "cap",
+   "name": "Red baseball cap",
+   "tags": [
+    "colourful",
+    "sporty"
+   ],
+   "color": "#c0281f"
+  },
+  {
+   "id": "cap-lemon",
+   "asset": "cap",
+   "name": "Lemon baseball cap",
+   "tags": [
+    "colourful",
+    "sporty"
+   ],
+   "color": "#f0d64a"
+  },
+  {
+   "id": "cap-sky",
+   "asset": "cap",
+   "name": "Sky baseball cap",
+   "tags": [
+    "colourful",
+    "sporty"
+   ],
+   "color": "#8fc1e8"
+  },
+  {
+   "id": "bucket-pink",
+   "asset": "bucket_hat",
+   "name": "Pink bucket hat",
+   "tags": [
+    "colourful",
+    "summer",
+    "festival"
+   ],
+   "color": "#e8a6b8"
+  },
+  {
+   "id": "bucket-orange",
+   "asset": "bucket_hat",
+   "name": "Orange bucket hat",
+   "tags": [
+    "colourful",
+    "summer",
+    "festival"
+   ],
+   "color": "#e07a2a"
+  },
+  {
+   "id": "bucket-mint",
+   "asset": "bucket_hat",
+   "name": "Mint bucket hat",
+   "tags": [
+    "colourful",
+    "summer",
+    "festival"
+   ],
+   "color": "#9fd8c0"
+  },
+  {
+   "id": "shirt-sky",
+   "asset": "mens_shirt",
+   "name": "Sky dress shirt",
+   "tags": [
+    "colourful",
+    "smart",
+    "spring"
+   ],
+   "color": "#8fc1e8"
+  },
+  {
+   "id": "shirt-mint",
+   "asset": "mens_shirt",
+   "name": "Mint dress shirt",
+   "tags": [
+    "colourful",
+    "smart",
+    "spring"
+   ],
+   "color": "#9fd8c0"
+  },
+  {
+   "id": "shirt-lilac",
+   "asset": "mens_shirt",
+   "name": "Lilac dress shirt",
+   "tags": [
+    "colourful",
+    "smart",
+    "spring"
+   ],
+   "color": "#b7a3d9"
+  }
+ ],
+ "looks": [
+  {
+   "id": "l-streetwear",
+   "name": "Streetwear",
+   "tags": [
+    "streetwear",
+    "colourful"
+   ],
+   "pieces": [
+    "hoodie-mustard",
+    "tee-white",
+    "cargo-sand",
+    "hightops-white",
+    "cap-red"
+   ]
+  },
+  {
+   "id": "l-grunge",
+   "name": "90s grunge",
+   "tags": [
+    "grunge",
+    "90s"
+   ],
+   "pieces": [
+    "flannel-blue",
+    "cargo-olive",
+    "hightops-red"
+   ]
+  },
+  {
+   "id": "l-office",
+   "name": "Office smart",
+   "tags": [
+    "office",
+    "business"
+   ],
+   "pieces": [
+    "shirt-light-blue",
+    "cargo-sand",
+    "chelsea-brown"
+   ]
+  },
+  {
+   "id": "l-evening",
+   "name": "Evening blue",
+   "tags": [
+    "evening",
+    "formal"
+   ],
+   "pieces": [
+    "coat-cobalt",
+    "cargo-khaki",
+    "chelsea-brown"
+   ]
+  },
+  {
+   "id": "l-summer-wedding",
+   "name": "Summer wedding",
+   "tags": [
+    "wedding",
+    "summer",
+    "smart"
+   ],
+   "pieces": [
+    "shirt-pale-pink",
+    "cargo-sand",
+    "pumps-nude"
+   ]
+  },
+  {
+   "id": "l-winter-street",
+   "name": "Winter streetwear",
+   "tags": [
+    "winter",
+    "streetwear"
+   ],
+   "pieces": [
+    "parka-cobalt",
+    "cargo-sand",
+    "hightops-lemon"
+   ]
+  },
+  {
+   "id": "l-outdoor",
+   "name": "Outdoor weekend",
+   "tags": [
+    "outdoor",
+    "winter"
+   ],
+   "pieces": [
+    "parka-mustard",
+    "cargo-olive",
+    "hightops-cream"
+   ]
+  },
+  {
+   "id": "l-y2k",
+   "name": "Y2K",
+   "tags": [
+    "y2k",
+    "party"
+   ],
+   "pieces": [
+    "tee-pink",
+    "baggy-jeans",
+    "leopard-runners",
+    "bucket-pink"
+   ]
+  },
+  {
+   "id": "l-school",
+   "name": "Preppy plaid",
+   "tags": [
+    "preppy",
+    "school"
+   ],
+   "pieces": [
+    "shirt-white",
+    "plaid-skirt",
+    "hightops-navy"
+   ]
+  },
+  {
+   "id": "l-festival",
+   "name": "Festival",
+   "tags": [
+    "festival",
+    "summer"
+   ],
+   "pieces": [
+    "tee-orange",
+    "denim-shorts",
+    "hightops-emerald",
+    "bucket-orange"
+   ]
+  },
+  {
+   "id": "l-beach",
+   "name": "Beach day",
+   "tags": [
+    "summer",
+    "beach"
+   ],
+   "pieces": [
+    "tee-sky",
+    "denim-shorts",
+    "hightops-white",
+    "cap-lemon"
+   ]
+  },
+  {
+   "id": "l-minimal",
+   "name": "Soft minimal",
+   "tags": [
+    "minimal"
+   ],
+   "pieces": [
+    "tee-sand",
+    "cargo-khaki",
+    "hightops-cream"
+   ]
+  },
+  {
+   "id": "l-cozy",
+   "name": "Weekend cozy",
+   "tags": [
+    "cozy",
+    "casual"
+   ],
+   "pieces": [
+    "hoodie-mint",
+    "tee-white",
+    "baggy-jeans",
+    "hightops-white"
+   ]
+  },
+  {
+   "id": "l-rock",
+   "name": "Rock & red",
+   "tags": [
+    "rock",
+    "night"
+   ],
+   "pieces": [
+    "tee-red",
+    "cargo-black",
+    "chelsea-brown"
+   ]
+  },
+  {
+   "id": "l-casual-red",
+   "name": "Colour pop",
+   "tags": [
+    "casual",
+    "bold"
+   ],
+   "pieces": [
+    "tee-cobalt",
+    "cargo-sky",
+    "hightops-orange"
+   ]
+  },
+  {
+   "id": "l-outdoor-red",
+   "name": "Winter red",
+   "tags": [
+    "winter",
+    "outdoor"
+   ],
+   "pieces": [
+    "parka-red",
+    "cargo-sand",
+    "hightops-white"
+   ]
+  },
+  {
+   "id": "l-gala",
+   "name": "Gala night",
+   "tags": [
+    "evening",
+    "elegant"
+   ],
+   "pieces": [
+    "maxi-emerald",
+    "heels-strappy",
+    "handbag-brown"
+   ]
+  },
+  {
+   "id": "l-cocktail",
+   "name": "Cocktail party",
+   "tags": [
+    "party",
+    "evening"
+   ],
+   "pieces": [
+    "cocktail-fuchsia",
+    "pumps-cobalt"
+   ]
+  },
+  {
+   "id": "l-wedding-guest",
+   "name": "Wedding guest",
+   "tags": [
+    "wedding",
+    "romantic"
+   ],
+   "pieces": [
+    "maxi-blush",
+    "pumps-nude",
+    "handbag-brown"
+   ]
+  },
+  {
+   "id": "l-boho",
+   "name": "Boho summer",
+   "tags": [
+    "summer",
+    "boho"
+   ],
+   "pieces": [
+    "maxi-saffron",
+    "bucket-sand",
+    "hightops-cream"
+   ]
+  },
+  {
+   "id": "l-gothic",
+   "name": "Dark romance",
+   "tags": [
+    "gothic",
+    "evening"
+   ],
+   "pieces": [
+    "dress-bolero",
+    "pumps-fuchsia"
+   ]
+  },
+  {
+   "id": "l-old-money",
+   "name": "Old money",
+   "tags": [
+    "old money",
+    "classic"
+   ],
+   "pieces": [
+    "coat-camel",
+    "cargo-khaki",
+    "riding-chocolate",
+    "handbag-brown"
+   ]
+  },
+  {
+   "id": "l-city-winter",
+   "name": "City winter",
+   "tags": [
+    "winter",
+    "classic"
+   ],
+   "pieces": [
+    "coat-forest",
+    "cargo-sand",
+    "chelsea-brown",
+    "cap-navy"
+   ]
+  },
+  {
+   "id": "l-snow",
+   "name": "Snow day",
+   "tags": [
+    "winter",
+    "outdoor",
+    "cozy"
+   ],
+   "pieces": [
+    "parka-cream",
+    "baggy-jeans",
+    "riding-chocolate",
+    "bucket-orange"
+   ]
+  },
+  {
+   "id": "l-sporty-cap",
+   "name": "Sporty weekend",
+   "tags": [
+    "sporty",
+    "casual"
+   ],
+   "pieces": [
+    "tee-lemon",
+    "cargo-grey",
+    "hightops-sky",
+    "cap-sky"
+   ]
+  },
+  {
+   "id": "l-sunset",
+   "name": "Sunset dinner",
+   "tags": [
+    "summer",
+    "evening"
+   ],
+   "pieces": [
+    "maxi-coral",
+    "pumps-nude",
+    "handbag-brown"
+   ]
+  },
+  {
+   "id": "l-lilac",
+   "name": "Lilac spring",
+   "tags": [
+    "spring",
+    "soft"
+   ],
+   "pieces": [
+    "shirt-lilac",
+    "cargo-sand",
+    "hightops-white"
+   ]
+  },
+  {
+   "id": "l-terracotta",
+   "name": "Autumn terracotta",
+   "tags": [
+    "autumn",
+    "classic"
+   ],
+   "pieces": [
+    "coat-terracotta",
+    "cargo-khaki",
+    "riding-chocolate"
+   ]
+  },
+  {
+   "id": "l-pop-party",
+   "name": "Pop party",
+   "tags": [
+    "party",
+    "colourful"
+   ],
+   "pieces": [
+    "cocktail-mustard",
+    "pumps-emerald"
+   ]
+  }
+ ]
+}

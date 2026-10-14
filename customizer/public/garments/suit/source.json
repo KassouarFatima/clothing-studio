@@ -1,0 +1,23 @@
+{
+  "author": "MargaretToigo",
+  "category": "Unsorted/other",
+  "changed": "2018-11-12",
+  "created": "2018-11-12",
+  "description": "This is a men's suit with more details than my previous suits. It will fit male and mostly male humans but some adjustments may be needed for child senior and big and tall humans. I have included diffuse specular and normal maps and the .mhmat file should get them all imported into Blender where their properties can be adjusted according to preference and render engine. Illustration shows suit with subsurf of two and some slight adjustments were made to the shirt collar around the neck. Chance is also wearing my Men's Loafers http://www.makehumancommunity.org/clothes/mens_loafers.html .",
+  "license": "CC0",
+  "original_author": "",
+  "original_source": "",
+  "source": "http://www.makehumancommunity.org/node/1733",
+  "thumbnail": "toigo_male_suit_3.png",
+  "type": "clothes",
+  "asset_pack_url": "https://files.makehumancommunity.org/asset_packs/suits01/suits01_cc0.zip",
+  "license_listing_url": "https://static.makehumancommunity.org/assets/assetpacks/suits01.html",
+  "modifications": [
+    "Relaxed sleeves inward sixteen degrees with a smooth shoulder transition",
+    "Two Catmull-Clark subdivision levels, consistent with creator render guidance",
+    "Split connected garment components into semantic materials",
+    "Converted decimeter coordinates to meters",
+    "Preserved original UVs; reflected native texture pixel rows for glTF sampling",
+    "Exported glTF 2.0 binary with native 2048px diffuse and normal maps"
+  ]
+}

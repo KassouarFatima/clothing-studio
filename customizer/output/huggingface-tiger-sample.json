@@ -1,0 +1,11 @@
+{
+  "provider": "Hugging Face ZeroGPU Space",
+  "spaceId": "black-forest-labs/FLUX.1-schnell",
+  "authenticated": false,
+  "prompt": "Create a centered T-shirt print illustration, isolated on a plain white background, with bold clean outlines and generous margins. Artwork only: no T-shirt, clothing mockup, person, photograph of a product, or watermark. Design description: A fierce vintage tiger head surrounded by a small rising sun and curved botanical leaves, bold orange, cream and deep black palette, crisp thick ink outlines, balanced symmetrical composition, retro screen-print illustration, subtle distressed ink texture, no text or lettering.",
+  "seed": 124,
+  "width": 1024,
+  "height": 1024,
+  "steps": 4,
+  "mimeType": "image/webp"
+}

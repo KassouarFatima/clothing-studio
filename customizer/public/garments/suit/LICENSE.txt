@@ -1,0 +1,20 @@
+Men’s Suit 3
+Creator: Margaret Toigo (MargaretToigo / MRT)
+License: CC0 1.0 Universal
+https://creativecommons.org/publicdomain/zero/1.0/
+
+Official asset/license listing:
+https://static.makehumancommunity.org/assets/assetpacks/suits01.html
+
+Creator asset page:
+http://www.makehumancommunity.org/node/1733
+
+Official source archive:
+https://files.makehumancommunity.org/asset_packs/suits01/suits01_cc0.zip
+
+Both packs/suits01.json and the original toigo_male_suit_3.mhclo
+identify this asset as CC0. The source .mhclo includes:
+# author MRT
+# license CC0
+
+Converted and adapted for this project; see source.json and README.md.

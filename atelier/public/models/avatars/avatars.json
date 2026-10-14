@@ -1,0 +1,27 @@
+{
+ "male": {
+  "file": "avatars/male.glb",
+  "height": 1.75,
+  "measurements": {
+   "chest": 100.0,
+   "waist": 83.2,
+   "hips": 94.3,
+   "height": 175
+  },
+  "verts": 42342,
+  "kb": 204
+ },
+ "female": {
+  "file": "avatars/female.glb",
+  "height": 1.68,
+  "measurements": {
+   "chest": 88.0,
+   "waist": 73.8,
+   "hips": 95.5,
+   "height": 168
+  },
+  "verts": 42342,
+  "kb": 202
+ },
+ "note": "waist and hips measured on the meshes (tape around the central torso slice); chest estimated (the A-pose arms touch the chest)"
+}

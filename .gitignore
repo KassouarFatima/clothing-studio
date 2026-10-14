@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+.vite/
+
+# Secrets — never commit (templates stay tracked)
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+
+# Windows / editor noise
+Thumbs.db
+Desktop.ini
+.DS_Store

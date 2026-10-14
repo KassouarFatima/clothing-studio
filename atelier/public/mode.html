@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MODE · Stylist</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='14' r='8' fill='%231f3a5a'/%3E%3Cpath d='M20 26 H44 L48 60 H16 Z' fill='%231f3a5a'/%3E%3C/svg%3E">
+</head>
+<body class="mode">
+<div id="shop">
+  <section id="chat">
+    <header>
+      <div class="avatar">R</div>
+      <div><strong>Rin</strong><span>Stylist · builds your whole look</span></div>
+    </header>
+    <div id="messages"></div>
+    <form id="composer">
+      <input id="input" autocomplete="off" placeholder="Describe a style, an occasion, or the clothes you want…">
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <section id="product">
+    <div id="stage">
+      <div id="viewer3d"></div>
+      <div id="empty">Your look will appear here, on the mannequin.<br><small>Tell Rin what you'd like, or pick a ready-made look below. Drag to turn it.</small></div>
+      <div id="working" hidden><div class="spinner"></div><p id="workingText">Dressing the mannequin…</p></div>
+      <div id="stageError" hidden></div>
+    </div>
+    <h2 id="lookName"></h2>
+    <div id="pieces"></div>
+    <details id="fitPanel" open>
+      <summary><b>Your body &amp; fit</b> <span class="muted">— see it on an avatar with your measurements, and the right size</span></summary>
+      <div class="fitRow">
+        <div class="seg" id="gender"><button data-g="female">Woman</button><button data-g="male">Man</button></div>
+        <label>Height <input id="mHeight" type="number" min="140" max="210"> cm</label>
+        <label>Chest <input id="mChest" type="number" min="60" max="160"> cm</label>
+        <label>Waist <input id="mWaist" type="number" min="50" max="160"> cm</label>
+        <label>Hips <input id="mHips" type="number" min="60" max="170"> cm</label>
+      </div>
+      <div class="fitRow">
+        <label class="check"><input id="showAvatar" type="checkbox"> Show my avatar</label>
+        <label class="check"><input id="fitMap" type="checkbox"> Fit map</label>
+        <span id="fitLegend" class="legend"></span>
+      </div>
+      <div id="sizes"></div>
+    </details>
+    <div id="actions">
+      <button id="btnLetsDoIt">✨ Let'sDo it.</button>
+      <button id="btnTailor" class="secondary" disabled>✂️ How to make it (tailor sheet)</button>
+      <button id="btnSave" disabled>Save this look to the window</button>
+      <button id="btnClear" class="ghost" disabled>Start again</button>
+    </div>
+    <div class="lookShelf">
+      <p class="muted">Ready-made looks — no waiting:</p>
+      <div id="looks"></div>
+    </div>
+    <p id="credits" class="muted credits"></p>
+  </section>
+</div>
+
+<div id="publish" hidden>
+  <div class="panel">
+    <header><strong>Save this look</strong><button id="pubClose" class="ghost">Close</button></header>
+    <p class="muted">It will be shown on a mannequin in the MODE window, where everyone walking by can see it.</p>
+    <input id="pubTitle" placeholder="Name of the look" maxlength="40">
+    <input id="pubAuthor" placeholder="Your name (shown as “by …”)" maxlength="30">
+    <button id="pubGo">Save</button>
+  </div>
+</div>
+<div id="tailor" hidden>
+  <div class="panel wide">
+    <header><strong>How to make this look — for your tailor</strong><button id="tailorClose" class="ghost">Close</button></header>
+    <div id="tailorBody"></div>
+    <div class="row"><button id="tailorPdf">Download the PDF for your tailor</button></div>
+  </div>
+</div>
+<div id="toast"></div>
+<script type="importmap">
+{ "imports": {
+  "three": "/vendor/three/build/three.module.js",
+  "three/addons/": "/vendor/three/examples/jsm/"
+} }
+</script>
+<script type="module" src="mode.js"></script>
+</body>
+</html>

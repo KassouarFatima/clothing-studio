@@ -1,0 +1,9 @@
+﻿Sample model photos for the "Wear it" try-on (no photo? try a model).
+Free stock images from Pexels (Pexels License: free for commercial use, no attribution required, no watermark):
+- model-man.jpg   -> https://www.pexels.com/photo/man-wearing-white-shirt-on-white-background-7561443/
+- model-woman.jpg -> https://www.pexels.com/photo/studio-shot-of-a-woman-in-a-white-shirt-15343587/
+- model-back.jpg  -> https://www.pexels.com/photo/back-view-of-woman-in-t-shirt-and-jeans-17781140/
+
+Pose ML models (Apache-2.0 License, Google MediaPipe, served locally):
+- tryon/pose_landmarker_lite.task   -> live camera tracking (fast)
+- tryon/pose_landmarker_heavy.task  -> exact one-shot fit for chosen photos

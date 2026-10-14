@@ -1,0 +1,54 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "buildCommand": "",
+  "installCommand": "npm install --omit=dev",
+  "outputDirectory": "public",
+  "functions": {
+    "api/index.mjs": {
+      "maxDuration": 300,
+      "memory": 2048,
+      "includeFiles": "{data/**,public/models/garments/garments.json,tailor.mjs,storage.mjs,limits.mjs}"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "/api/index?path=api/:path*"
+    },
+    {
+      "source": "/output/:path*",
+      "destination": "/api/index?path=output/:path*"
+    }
+  ],
+  "regions": [
+    "fra1"
+  ],
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/street.html",
+      "permanent": false
+    }
+  ],
+  "headers": [
+    {
+      "source": "/models/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=604800, stale-while-revalidate=86400"
+        }
+      ]
+    }
+  ]
+}

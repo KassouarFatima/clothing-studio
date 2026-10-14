@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Atelier City</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M20 8 Q32 16 44 8 L60 18 L54 30 L46 26 L46 58 L18 58 L18 26 L10 30 L4 18 Z' fill='%23b5562b'/%3E%3C/svg%3E">
+<style>
+  html, body { margin: 0; height: 100%; overflow: hidden; background: #111; color: #fff; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+  canvas { display: block; }
+  [hidden] { display: none !important; }
+  #start { position: fixed; inset: 0; display: grid; place-items: center; text-align: center; background: radial-gradient(ellipse at center, rgba(0,0,0,.25), rgba(0,0,0,.7)); cursor: pointer; z-index: 5; }
+  #start h1 { font: 300 64px/1 Georgia, serif; letter-spacing: .3em; margin: 0 0 10px .3em; }
+  #start p { margin: 6px; opacity: .9; }
+  .keys { margin-top: 22px; display: inline-grid; grid-template-columns: auto auto; gap: 6px 16px; text-align: left; font-size: 14px; opacity: .85; }
+  kbd { background: rgba(255,255,255,.18); border-radius: 4px; padding: 2px 7px; font-family: inherit; }
+  #crosshair { position: fixed; left: 50%; top: 50%; width: 6px; height: 6px; margin: -3px; border-radius: 50%; background: rgba(255,255,255,.8); pointer-events: none; z-index: 2; }
+  #prompt { position: fixed; left: 50%; bottom: 14%; transform: translateX(-50%); background: rgba(0,0,0,.55); padding: 10px 18px; border-radius: 999px; font-size: 16px; pointer-events: none; z-index: 2; }
+  #shopFrame { position: fixed; inset: 3vh 3vw; border: 0; border-radius: 18px; box-shadow: 0 20px 60px rgba(0,0,0,.5); background: #f4f1ec; z-index: 10; width: 94vw; height: 94vh; }
+  #closeShop { position: fixed; top: calc(3vh + 12px); right: calc(3vw + 12px); z-index: 11; font: 600 15px -apple-system, sans-serif; border: 0; border-radius: 10px; padding: 10px 16px; background: #1d1b18; color: #fff; cursor: pointer; }
+</style>
+</head>
+<body>
+<div id="start">
+  <div>
+    <h1>ATELIER</h1>
+    <p id="status">Loading the city…</p>
+    <div class="keys">
+      <span><kbd>W A S D</kbd></span><span>walk</span>
+      <span><kbd>Shift</kbd></span><span>walk faster</span>
+      <span>mouse</span><span>look around</span>
+      <span><kbd>E</kbd></span><span>talk to Yanis / try a t-shirt</span>
+      <span><kbd>Esc</kbd></span><span>pause</span>
+    </div>
+  </div>
+</div>
+<div id="crosshair" hidden></div>
+<div id="prompt" hidden></div>
+<iframe id="shopFrame" hidden allow="camera; fullscreen" title="Atelier shop"></iframe>
+<button id="closeShop" hidden>← Back to the street</button>
+<script type="importmap">
+{ "imports": {
+  "three": "/vendor/three/build/three.module.js",
+  "three/addons/": "/vendor/three/examples/jsm/"
+} }
+</script>
+<script type="module" src="world.js"></script>
+</body>
+</html>

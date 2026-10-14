@@ -1,0 +1,40 @@
+# Material definition for hoodmatsd
+
+name hoodmatsd
+description UnnamedMaterial material
+ambientColor 1.0 1.0 1.0
+diffuseColor 0.4023 0.08955 0.3928
+specularColor 0.5 0.5 0.5
+shininess 0.0
+emissiveColor 0.0 0.0 0.0
+opacity 1.0
+translucency 0.0
+
+shadeless False
+wireframe False
+transparent False
+alphaToCoverage True
+backfaceCull False
+depthless False
+
+castShadows True
+
+receiveShadows True
+
+diffuseTexture hoodietex1.png
+normalmapTexture normalshoodie.png
+normalmapIntensity 2.0
+
+shader shaders/glsl/litsphere
+
+shaderParam AdditiveShading 0.5
+shaderParam litsphereTexture litspheres/lit_matte.png
+
+shaderConfig ambientOcclusion True
+shaderConfig normal True
+shaderConfig bump False
+shaderConfig displacement False
+shaderConfig vertexColors False
+shaderConfig spec False
+shaderConfig transparency True
+shaderConfig diffuse True
