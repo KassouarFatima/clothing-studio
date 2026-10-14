@@ -30,18 +30,73 @@ clothing-studio/
    watches the store and re-hangs the display with a toast when something new
    appears (the handoff slot stays as a fallback if that push fails).
 
-## Run it
+## Use it locally — step by step
 
-Requirements: Node.js 22+ (Atelier: 20+), one terminal is enough.
+Everything runs on your own machine (localhost): no hosting, no paid API.
 
-```cmd
-npm start
-```
+### A. First time (after you get the folder)
 
-The launcher starts all three processes and opens http://localhost:8792
-(the virtual world) in your browser. Press Ctrl+C to stop everything.
+1. **Install Node.js 22 or newer** — check it in a terminal: `node -v`
+2. **Open a terminal in the project folder** (skip this whole step if the
+   folder already lives on your disk):
 
-Start pieces individually if you prefer:
+   ```cmd
+   git clone https://github.com/KassouarFatima/clothing-studio.git
+   cd clothing-studio
+   ```
+
+3. **Install the two dependency sets** (skip if the folder already has its
+   `node_modules` folders):
+
+   ```cmd
+   cd customizer && npm install
+   cd ..\atelier && npm install
+   ```
+
+4. **Optional — add your free AI keys** (everything runs without them; AI
+   features just light up when you add keys): copy the templates next to
+   them and paste your keys —
+
+   | template on disk | copy to | what it unlocks |
+   |---|---|---|
+   | `atelier\.env.example` | `atelier\.env` | Yanis/Rin chat, AI designs, try-on |
+   | `customizer\serveur\.env.example` | `customizer\serveur\.env` | studio AI images |
+
+   then validate with `node check-keys.mjs` — it must print **VALID**.
+   Free keys and exact paste rules: **API keys** section below.
+
+5. **Start everything:**
+
+   ```cmd
+   npm start
+   ```
+
+   One terminal starts all three services and opens
+   **http://localhost:8792** (the street) in your browser.
+
+### B. Every time you use it
+
+1. In the project folder run `npm start` (one terminal is enough). This comes up:
+
+   | address | what it is |
+   |---|---|
+   | **http://localhost:8792** | the walkable street + Atelier — Yanis & Rin (opens first) |
+   | **http://localhost:5173** | the *Let'sDo it.* studio (opens from the street in a new tab) |
+   | **http://localhost:8080** | the local API behind both (chat, images, handoff) |
+
+2. **Walk** with **W A S D** → stand at a counter → press **E** to talk.
+3. Ask Yanis for a design, e.g. `Design me a golden tiger on a black t-shirt` —
+   it prints on the 3D garment under your eyes, and the price stays in **$**.
+4. Click **✨ Let'sDo it.** → the studio opens in a new tab → design anything →
+   click **🎁 Give to customer** → you land back in the street and the finished
+   design **hangs in the shop window**.
+5. In the studio click **Wear it** → **Select an image** → pick a photo of
+   yourself: the garment is placed on the person and your size (**XS…XXXL**)
+   appears within a few seconds — the measuring happens on your device,
+   nothing is uploaded.
+6. **Stop everything:** press **Ctrl+C** in that terminal.
+
+Prefer running the pieces separately:
 
 ```cmd
 npm run shop       :: shop front  (customizer folder, port 5173)
@@ -49,18 +104,7 @@ npm run api        :: chat + image API (customizer/serveur, port 8080)
 npm run atelier    :: Atelier studio (atelier folder, port 8792)
 ```
 
-## First run
-
-Dependencies are already installed. After re-copying the folder, run:
-
-```cmd
-cd customizer && npm install
-cd ..\atelier && npm install
-```
-
-Optional keys live in `atelier/.env` (copied from `.env.example`) and
-`customizer/serveur/.env`. Everything works without them; AI features
-(Groq/Gemini/HF) light up when you add your own free keys.
+After changing code, the page looks stale? Press **Ctrl+F5** in the browser.
 
 ## API keys — where to change them, and where to get them
 
@@ -165,7 +209,7 @@ The scripted replies need working AI keys — check them with `node check-keys.m
 
 ```cmd
 cd customizer
-npm run test:tryon          :: 43 frontend tests
+npm run test:tryon          :: 44 frontend tests
 cd serveur && npm test      :: 41 backend tests
 npx eslint src --ext .js,.jsx
 ```
