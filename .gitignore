@@ -13,6 +13,15 @@ dist/
 # Logs
 *.log
 
+# Python detector (detect/): the YOLO model is downloaded once and cached,
+# bytecode must never be committed
+detect/yolov8n.onnx
+__pycache__/
+*.pyc
+
+# Temporary photo probes used during development
+_probe/
+
 # Windows / editor noise
 Thumbs.db
 Desktop.ini

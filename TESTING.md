@@ -94,6 +94,6 @@ Crash reasons land in `atelier\server.log`, `customizer\serveur\server.log`, `cu
 ## 7. Developer gates (after any code change)
 
 ```powershell
-npm test                     # root: 73/73 must pass
+npm test                     # root: 95/95 must pass (54 frontend + 41 backend)
 cd customizer; npx eslint src --ext .js,.jsx   # must stay at 106 errors (baseline)
 ```

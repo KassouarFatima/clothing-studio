@@ -6,7 +6,8 @@ import state from '../store';
 import Garment from '../canvas/Garment';
 import GarmentSelector from '../comp/GarmentSelector';
 import { createPoseTracker } from './poseTracker';
-import { framingHint, getPoseFit } from './fitPose';
+import { getPoseFit } from './fitPose';
+import { detectPeople, fitStatus, NO_CLEAR_PERSON, NO_PERSON, subjectBox } from './detect.js';
 import { describeSize, measureBody, predictSize } from './bodySize';
 import { measureRoomLight, paintOcclusion } from './occlusion';
 import { createFitSmoother } from './smoothFit';
@@ -106,6 +107,10 @@ export default function WearIt({ onClose }) {
   const probe = useRef(null);
   probe.current ||= typeof document === 'undefined' ? null : Object.assign(document.createElement('canvas'), { width: 16, height: 16 });
   const sessionFailure = useRef(() => {});
+  // The local YOLO detector's verdict for this photo (null = service off),
+  // and the detected person the pose measured, drawn over the picture.
+  const detector = useRef(null);
+  const [detectorBox, setDetectorBox] = useState(null);
   const [status, setStatus] = useState('');
   const [failure, setFailure] = useState('');
   const [ready, setReady] = useState(false);
@@ -202,6 +207,8 @@ export default function WearIt({ onClose }) {
     setFailure('');
     setReady(false);
     setMeasurements(null);
+    detector.current = null;
+    setDetectorBox(null);
     setStatus('Reading your photo…');
     const rejectPhoto = problem => { if (alive) { setFailure(problem); setStatus(''); } };
     sessionFailure.current = problem => rejectPhoto(problem?.message || 'That photo could not be read.');
@@ -217,11 +224,44 @@ export default function WearIt({ onClose }) {
       if (!alive || controller.signal.aborted) return;
       setRatio(element.naturalWidth / element.naturalHeight);
       setStatus('Measuring your body…');
+      // The local detector (OpenCV + YOLOv8, detect/server.py) reads the very
+      // same photo in parallel: it vouches how many people are in the picture
+      // and that the pose landed on one of them. Service off? It answers
+      // {down:true} and everything below behaves exactly as before.
+      const detection = fetch(photoUrl)
+        .then(response => (response.ok ? response.blob() : Promise.reject(new Error('unreadable photo'))))
+        .then(blob => detectPeople(blob, { signal: controller.signal }))
+        .catch(() => ({ down: true, boxes: [], count: 0 }));
+      detection.then(result => {
+        // Confident there is nobody? Give the pose model a moment to
+        // disagree, then stop waiting the full twenty seconds.
+        if (alive && !gotPose && !result.down && result.count === 0) {
+          clearTimeout(giveUp);
+          giveUp = setTimeout(() => { if (!gotPose) rejectPhoto(NO_PERSON); }, 2500);
+        }
+      });
+      // One photo, one verdict: measurements are only handed over once the
+      // detector has confirmed they were taken from a person in this picture.
+      const settle = async (poseLandmarks, worldLandmarks, mask) => {
+        const result = await detection;
+        if (!alive || controller.signal.aborted) return;
+        detector.current = result;
+        if (!result.down && result.count === 0) { rejectPhoto(NO_PERSON); return; }
+        // These landmarks must sit inside a detected person — otherwise the
+        // pose locked onto something else and every number from it is a lie.
+        const subject = result.down ? null : subjectBox(result.boxes, poseLandmarks);
+        if (!result.down && !subject) { rejectPhoto(NO_CLEAR_PERSON); return; }
+        const visible = getPoseFit(poseLandmarks, element.naturalWidth, element.naturalHeight, state.garment, adjustments.current).visible;
+        setMeasurements(measureBody(poseLandmarks, worldLandmarks, mask, element.naturalWidth, element.naturalHeight));
+        setDetectorBox(subject);
+        setReady(true);
+        setStatus(fitStatus(visible, result, state.garment));
+      };
       tracker = await createPoseTracker({
         signal: controller.signal,
         precise: true, // one still picture: the heavy ML model for an exact fit
         onPose: (landmarks, extras) => {
-          if (!alive) return;
+          if (!alive || gotPose) return;
           gotPose = true;
           clearTimeout(giveUp);
           // One detection covers the whole still picture: an infinite time
@@ -229,17 +269,15 @@ export default function WearIt({ onClose }) {
           pose.current = { landmarks, worldLandmarks: extras?.worldLandmarks ?? null, mask: extras?.mask ?? null, capturedAt: extras?.capturedAt ?? performance.now(), time: Number.POSITIVE_INFINITY };
           roomLight.current = measureRoomLight(probe.current, element, landmarks) ?? roomLight.current;
           paintOcclusion(occlusion.current, element, pose.current, { skipHead: state.garment === 'hat' });
-          const visible = getPoseFit(landmarks, element.naturalWidth, element.naturalHeight, state.garment, adjustments.current).visible;
-          setMeasurements(measureBody(landmarks, extras?.worldLandmarks, extras?.mask, element.naturalWidth, element.naturalHeight));
-          setReady(true);
-          setStatus(visible ? 'Fit ready — adjust Size and Position' : framingHint(state.garment));
+          settle(landmarks, extras?.worldLandmarks ?? null, extras?.mask ?? null)
+            .catch(() => { if (alive) rejectPhoto('That photo could not be read.'); });
         },
         onError: error => rejectPhoto(error?.message || 'Local body tracking failed. Please try again.'),
       });
       if (!alive || controller.signal.aborted) return;
       tracker.detect(element);
       giveUp = setTimeout(() => {
-        if (!gotPose) rejectPhoto('No person was found in this photo. Choose one where your upper body is clearly visible.');
+        if (!gotPose) rejectPhoto(NO_PERSON);
       }, 20000);
     }
     analyse().catch(error => { if (alive && error?.name !== 'AbortError') rejectPhoto(error?.message || 'That photo could not be read.'); });
@@ -255,7 +293,7 @@ export default function WearIt({ onClose }) {
     const element = photo.current;
     paintOcclusion(occlusion.current, element, sample, { skipHead: snap.garment === 'hat' });
     const visible = getPoseFit(sample.landmarks, element.naturalWidth, element.naturalHeight, snap.garment, adjustments.current).visible;
-    setStatus(visible ? 'Fit ready — adjust Size and Position' : framingHint(snap.garment));
+    setStatus(fitStatus(visible, detector.current, snap.garment));
   }, [ready, snap.garment]);
 
   const pickPhoto = () => filePicker.current?.click();
@@ -319,6 +357,16 @@ export default function WearIt({ onClose }) {
         </Canvas></div>}
         {/* Your body and the room, painted back over the garment. */}
         <canvas ref={occlusion} className="wear-occlusion" aria-hidden="true" />
+        {/* The local detector's box: which person in this photo was measured. */}
+        {ready && detectorBox && <div className="wear-detect" aria-hidden="true"
+          style={{
+            left: `${detectorBox.xyxy[0] * 100}%`,
+            top: `${detectorBox.xyxy[1] * 100}%`,
+            width: `${(detectorBox.xyxy[2] - detectorBox.xyxy[0]) * 100}%`,
+            height: `${(detectorBox.xyxy[3] - detectorBox.xyxy[1]) * 100}%`,
+          }}>
+          <b>{`person ${Math.round(detectorBox.score * 100)}%`}</b>
+        </div>}
       </div>
       </div>
       {!photoUrl && !failure && <div className="wear-message" role="status">

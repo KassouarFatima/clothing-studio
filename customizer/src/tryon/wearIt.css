@@ -21,6 +21,11 @@
 .wear-mirrored { transform: scaleX(-1); }
 .wear-overlay { position: absolute; inset: 0; pointer-events: none; }
 .wear-occlusion { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+/* The local YOLO detector's box: the person the pose measured. */
+.wear-detect { position: absolute; border: 2px solid #34d399; border-radius: 4px; pointer-events: none; box-shadow: 0 0 0 1px #052e1b44; }
+.wear-detect b { position: absolute; top: 2px; left: 2px; font-size: 10px; line-height: 1.4; padding: 1px 6px; border-radius: 3px 3px 3px 0; background: #34d399; color: #06281c; font-weight: 700; letter-spacing: .02em; white-space: nowrap; }
+/* The stage flips for Mirror, so the tag flips back to stay readable. */
+.wear-mirrored .wear-detect b { transform: scaleX(-1); }
 .wear-status { position: absolute; bottom: 12px; left: 12px; right: 12px; margin: auto; width: fit-content; max-width: calc(100% - 24px); padding: 8px 13px; border-radius: 20px; background: #111827d9; color: #fff; font-size: 12px; text-align: center; }
 .wear-message { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px; padding: 32px; background: #1d2530e8; color: #fff; text-align: center; }
 .wear-message p { max-width: 390px; font-size: 14px; }

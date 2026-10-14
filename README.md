@@ -8,6 +8,7 @@ clothing-studio/
   start.mjs        one-command launcher (starts everything)
   customizer/      shop front — garment lineup, Wear it, chat   (port 5173 + API 8080)
   atelier/         AI tailor studio — designs, try-on, print    (port 8792)
+  detect/          local YOLO person detector for Wear it       (port 8081, optional)
 ```
 
 ## How the two sites connect
@@ -83,6 +84,7 @@ Everything runs on your own machine (localhost): no hosting, no paid API.
    | **http://localhost:8792** | the walkable street + Atelier — Yanis & Rin (opens first) |
    | **http://localhost:5173** | the *Let'sDo it.* studio (opens from the street in a new tab) |
    | **http://localhost:8080** | the local API behind both (chat, images, handoff) |
+   | **http://localhost:8081** | the local YOLO person detector for **Wear it** (optional) |
 
 2. **Walk** with **W A S D** → stand at a counter → press **E** to talk.
 3. Ask Yanis for a design, e.g. `Design me a golden tiger on a black t-shirt` —
@@ -93,7 +95,8 @@ Everything runs on your own machine (localhost): no hosting, no paid API.
 5. In the studio click **Wear it** → **Select an image** → pick a photo of
    yourself: the garment is placed on the person and your size (**XS…XXXL**)
    appears within a few seconds — the measuring happens on your device,
-   nothing is uploaded.
+   nothing is uploaded. When the local detector is running you also see a
+   green box around the person whose size was measured.
 6. **Stop everything:** press **Ctrl+C** in that terminal.
 
 Prefer running the pieces separately:
@@ -102,9 +105,39 @@ Prefer running the pieces separately:
 npm run shop       :: shop front  (customizer folder, port 5173)
 npm run api        :: chat + image API (customizer/serveur, port 8080)
 npm run atelier    :: Atelier studio (atelier folder, port 8792)
+python detect\server.py  :: Wear it person detector (port 8081, optional)
 ```
 
 After changing code, the page looks stale? Press **Ctrl+F5** in the browser.
+
+## Local YOLO person detector (Wear it, optional)
+
+**Wear it** gets a second opinion from **OpenCV + YOLOv8**, running as a small
+Python service on your machine (`detect/server.py`, port 8081):
+
+- it finds **the person** in your photo (a green box is drawn around the one
+  whose size is measured, with the confidence the model gave),
+- it **says so early when a photo holds no person** instead of waiting,
+- it **refuses the measurements** when the body tracker locked onto something
+  that is not a person — a wrong number is worse than no number,
+- and when several people are in the picture, the status line says the size
+  follows the person measured.
+
+`npm start` launches it automatically **if Python is there**. Everything stays
+on your machine (the service only listens on `127.0.0.1`), and when it is not
+running, Wear it works exactly as before on the in-browser pose model alone.
+
+First run needs Python 3 + OpenCV once — `pip install opencv-python` — and
+downloads the `yolov8n.onnx` model (~12 MB) next to `detect/server.py`, where
+it is cached. Check or run it by hand:
+
+```cmd
+python detect\server.py --selftest path\to\any-photo.jpg  :: prints the boxes it found
+python detect\server.py                                   :: start the service alone
+```
+
+The model is YOLOv8n by Ultralytics, licensed **AGPL-3.0** — fine for local
+use; keep that in mind before redistributing the model file itself.
 
 ## API keys — where to change them, and where to get them
 
@@ -209,7 +242,7 @@ The scripted replies need working AI keys — check them with `node check-keys.m
 
 ```cmd
 cd customizer
-npm run test:tryon          :: 44 frontend tests
+npm run test:tryon          :: 54 frontend tests
 cd serveur && npm test      :: 41 backend tests
 npx eslint src --ext .js,.jsx
 ```
